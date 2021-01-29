@@ -23,4 +23,4 @@ function iterate(){
         counter += 1;
     }
 }
-//iterate();
+iterate();
