@@ -23,7 +23,7 @@ $ npm i
 $ npm start
 ```
 
-For runing tests...
+For running tests...
 
 ```sh
 $ npm test
