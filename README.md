@@ -23,7 +23,7 @@ $ npm i
 $ npm start
 ```
 
-For running tests...
+Two test cases are taken into account, one considering all numbers from 1 to 100 and another considering only edge cases. In order to run them....
 
 ```sh
 $ npm test
