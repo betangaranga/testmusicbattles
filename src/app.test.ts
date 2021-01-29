@@ -1,32 +1,47 @@
 import mapValue from './app';
-describe('Unit testing', () => { 
-    let i = 1;
-    while(i < 100){
-      it('multiple of 3 should be Music', () => {
-        if(i%3 == 0){
-
-        expect(mapValue(i)).toBe("Music");
-        }
+describe('Testing special test cases only', () => { 
+      it('3 should output  Music', () => {
+        const consoleLog = console.log;
+        console.log = jest.fn();
+        expect(mapValue(3)).toBe("Music");
+        
+      });
+      it('9 should output  Music', () => {
+        const consoleLog = console.log;
+        console.log = jest.fn();
+        expect(mapValue(9)).toBe("Music");
+        
       });
     
-        it('multiple of 5 should be IT', () => {
-        if(i%5 == 0){
-          expect(mapValue(i)).toBe("IT");
-        }
+        it('5 should output IT', () => {
+        const consoleLog = console.log;
+        console.log = jest.fn();
+          expect(mapValue(5)).toBe("IT");
+        
         });
-      
-        it('multiple of 3 or 5 should be Musical', () => {
-          if(i%15 == 0){
-            expect(mapValue(i)).toBe("Musical");
-          }
+        it('50 should output IT', () => {
+            const consoleLog = console.log;
+            console.log = jest.fn();
+              expect(mapValue(50)).toBe("IT");
+            
+            });
+        it('15 should output Musical', () => {
+        const consoleLog = console.log;
+        console.log = jest.fn();
+            expect(mapValue(15)).toBe("Musical");
+          
         });
+        it('45 should output Musical', () => {
+            const consoleLog = console.log;
+            console.log = jest.fn();
+                expect(mapValue(45)).toBe("Musical");
+              
+            });
      
-       it('Others should be the number itself', () => {
-        if(i%3!=0 && i%5 != 0 && i%15 != 0){
-            expect(mapValue(i)).toBe(i);
-        }
+       it('1 should output the number itself', () => {
+        const consoleLog = console.log;
+        console.log = jest.fn();
+            expect(mapValue(1)).toBe(1);
+        
           });
-      
-      i++;
-    }
 });
